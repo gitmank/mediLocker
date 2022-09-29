@@ -5,9 +5,286 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MediLocker Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-around py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img src="/resources/medilocker-footer.png" class="bi me-2" width="200" height="32" role="img" aria-label="Logo"></img>
+          </a>
+    
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 link-light">Services</a></li>
+            <li><a href="#" class="nav-link px-2 link-light">Doctors</a></li>
+            <li><a href="#" class="nav-link px-2 link-light">About us</a></li>
+            <li><a href="#" class="nav-link px-2 link-light">Contact us</a></li>
+          </ul>
+    
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-primary me-2" style="border-color: white; color: white">Sign in</button>
+            <button type="button" class="btn btn-primary" style="background-color: white; color:rgb(27, 34, 91);">Sign up</button>
+          </div>
+          <style>
+            header {
+                background-color: rgb(27, 34, 91);
+            }
+        </style>
+        </header>
+        <div
+        class="bg-image"
+        style="
+          background-image: url('/resources/bg-one.png');
+          height: 600px;
+          ">
+          <div class="container" style="height: 100px;"></div>
+            <div class="px-4 pt-5 my-5 text-center">
+              <h2 id="we-care-text" class="display-6 fw-bold">We Care</h2>
+              <h2 class="display-8 fw-bold">about your health.</h2>
+              <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">Good health is the state of mental, physical and social well being
+                  and it does not just mean absence of diseases.</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                  <button type="button" id="watch-videos-button" class="btn btn-outline-secondary btn-lg px-4"><img src="/resources/tabler_player-play.png"></img>Watch Videos</button>
+                  <button type="button" id="book-button" class="btn btn-primary btn-lg px-4 me-sm-3">Book an appointment</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div
+        class="bg-image"
+        style="
+          background-image: url('/resources/bg-two.png');
+          height: 700px;
+          ">
+          <div class="px-4 pt-5 my-5 text-center">
+            <h2 class="display-8 fw-bold">Our Medical Services</h2>
+            <h5 class="display-10">We are dedicate dto serving you the best medical services.</h5>
+          </div>
+          <div id="search-doctor-bar" class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center">
+            <form id="search-doctor-form" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control" placeholder="Name of doctor">
+              <input type="search" class="form-control" placeholder="Specialty">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Availability</label>
+              </div>
+              <input id="submit-button" type="submit" class="form-control" placeholder="Submit">
+            </form>
+            </div>
+          <div id="card-container">
+            <div id="card-one" class="card">
+              <div class="card-body">
+                <img src="/resources/card-1-icon.png" alt="microscope icon">
+                <h5 class="card-title">Past mecical record</h5>
+              </div>
+            </div>
+            <div id="card-one" class="card">
+              <div class="card-body">
+                <img src="/resources/card-2-icon.png" alt="microscope icon">
+                <h5 class="card-title">E-prescription</h5>
+              </div>
+            </div>
+            <div id="card-one" class="card">
+              <div class="card-body">
+                <img src="/resources/card-3-icon.png" alt="microscope icon">
+                <h5 class="card-title">Book appointment</h5>
+              </div>
+            </div>
+            <div id="card-one" class="card">
+              <div class="card-body">
+                <img src="/resources/card-4-icon.png" alt="microscope icon">
+                <h5 class="card-title">Call center</h5>
+              </div>
+            </div>
+          </div>      
+      </div>
+      </div>
+      <div
+      class="bg-image"
+      style="
+        background-image: url('/resources/bg-three.png');
+        height: 1200px;
+        ">
+
+        <div class="px-4 pt-5 my-5 text-center">
+          <h2 class="display-8 fw-bold">Meet Our Family</h2>
+          <h5 class="display-10">Extremely qualified doctors ready to serve you.</h5>
+        </div>
+
+        <div id="doctor-card-container" class="container" style="margin-bottom: 100px;">
+          <div id="card-two" class="card">
+              <div style="border-radius: 20px; background-color: rgb(27, 34, 91); height: 150px; width: 250px; margin-top: 50px; margin-left: 25px;"></div>
+              <img class="card-img-top" src="/resources/doc-sarah.png" alt="Card image cap" style="margin-top: -210px;">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Sarah Louis</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Cardiologist</h6>
+              <img src="/resources/rating.png" style="margin-bottom: 20px;"></img>
+              <a href="#" class="btn btn-primary" style="border-color: rgb(27, 34, 91); background-color: white; color: rgb(27, 34, 91);">Book an appointment</a>
+            </div>
+          </div>
+          <div id="card-two" class="card">
+            <div style="border-radius: 20px; background-color: rgb(27, 34, 91); height: 150px; width: 250px; margin-top: 50px; margin-left: 25px;"></div>
+            <img class="card-img-top" src="/resources/doc-emma.png" alt="Card image cap" style="margin-top: -212px; height: 200px; width: 200px;margin-left: 50px;">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Emma Wilson</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Neurologist</h6>
+            <img src="/resources/rating.png" style="margin-bottom: 20px;"></img>
+            <a href="#" class="btn btn-primary" style="border-color: rgb(27, 34, 91); background-color: white; color: rgb(27, 34, 91);">Book an appointment</a>
+          </div>
+        </div>
+        </div>
+        <div id="doctor-card-container" class="container">
+          <div id="card-two" class="card">
+              <div style="border-radius: 20px; background-color: rgb(27, 34, 91); height: 150px; width: 250px; margin-top: 50px; margin-left: 25px;"></div>
+              <img class="card-img-top" src="/resources/doc-shane.png" alt="Card image cap" style="margin-top: -210px;">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Shane Draw</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Gynecologist</h6>
+              <img src="/resources/rating.png" style="margin-bottom: 20px;"></img>
+              <a href="#" class="btn btn-primary" style="border-color: rgb(27, 34, 91); background-color: white; color: rgb(27, 34, 91);">Book an appointment</a>
+            </div>
+          </div>
+          <div id="card-two" class="card">
+            <div style="border-radius: 20px; background-color: rgb(27, 34, 91); height: 150px; width: 250px; margin-top: 50px; margin-left: 25px;"></div>
+            <img class="card-img-top" src="/resources/doc-ravi.png" alt="Card image cap" style="margin-top: -210px;">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Ravi Bec</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Pediatrician</h6>
+            <img src="/resources/rating.png" style="margin-bottom: 20px;"></img>
+            <a href="#" class="btn btn-primary" style="border-color: rgb(27, 34, 91); background-color: white; color: rgb(27, 34, 91);">Book an appointment</a>
+          </div>
+        </div>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 50px;">
+          <a href="#" class="btn btn-primary" style="border-color: rgb(27, 34, 91); color: white; background-color: rgb(27, 34, 91);">See more</a>
+        </div>
+      </div>
+      <div class="container" style="background-color: rgb(27, 34, 91); color: white; max-height: 500px;">
+        <footer class="py-5">
+          <div class="row">
+            <div class="col-6 col-md-2 mb-3" style="margin-left: 50px;">
+              <h5>General</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: rgba(200, 200, 200)">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: rgba(200, 200, 200)">About Us</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: rgba(200, 200, 200)">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: rgba(200, 200, 200)">Contact Us</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Services</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: rgba(200, 200, 200)">Doctors</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: rgba(200, 200, 200)">Prescriptions</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: rgba(200, 200, 200)">Medical Records</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: rgba(200, 200, 200)">Book Appointment</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-md-5 offset-md-1 mb-3">
+              <form>
+                <h5>Subscribe to our newsletter</h5>
+                <p>Get latest news of our hospital.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                  <label for="newsletter1" class="visually-hidden">Email address</label>
+                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                  <button class="btn btn-primary" type="button" style="background-color: white; color: rgb(27, 34, 91);">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+      
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-5 my-5 border-top" style="padding: 3%;">
+            <p>© 2022 MediLocker Inc. All rights reserved.</p>
+            <img src="/resources/medilocker-footer.png" alt="Medilocker logo" style="height: 50px; width: 300px">
+            <p>Digital India Corporation(DIC)<br>Ministry of Electronics & IT (MeitY)<br>Government of India</p>
+            <ul class="list-unstyled d-flex">
+              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   </body>
 </html>
+<style>
+  * {
+    font-family:'Poppins', Courier, monospace;
+  }
+  #watch-videos-button {
+    background-color: gray;
+    color: white;
+  }
+  #book-button {
+    color: white;
+    background-color: rgb(27, 34, 91);
+  }
+  #we-care-text {
+    color: rgb(27, 34, 91);
+  }
+  #search-doctor-bar {
+    height: 100px;
+    width: 900px;
+    margin-left: 400px;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 20px;
+  }
+  #search-doctor-form {
+    display: flex;
+    gap: 20px;
+  }
+  .form-control {
+    max-width: 250px;
+  }
+  #submit-button {
+    color: white;
+    background-color: rgb(27, 34, 91);
+    border-width: 2px;
+    width: 100px;
+  }
+  #submit-button:hover {
+    color: white;
+    background-color: gray;
+  }
+  #card-container {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    gap: 100px;
+  }
+  #card-one {
+    display: inline-flex;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+  }
+  #card-one .card-title {
+    margin-top: 30px;
+  }
+  #card-one:hover {
+    color: white;
+    background-color: rgb(27, 34, 91);
+  }
+  #card-two {
+    display: inline-flex;
+    justify-content: center;
+    height: 400px;
+    gap: 10px;
+    width: 300px;
+    border-radius: 20px;
+  }
+  #doctor-card-container {
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+  }
+</style>
