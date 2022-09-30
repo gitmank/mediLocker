@@ -24,8 +24,8 @@
           </ul>
     
           <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2" style="border-color: white; color: white">Sign in</button>
-            <button type="button" class="btn btn-primary" style="background-color: white; color:rgb(27, 34, 91);">Sign up</button>
+            <a href="/html/signin.html"><button type="button" class="btn btn-outline-primary me-2" style="border-color: white; color: white">Sign in</button></a>
+            <a href="/html/signup.html"><button type="button" class="btn btn-primary" style="background-color: white; color:rgb(27, 34, 91);">Sign up</button></a>
           </div>
           <style>
             header {
@@ -47,8 +47,8 @@
                 <p class="lead mb-4">Good health is the state of mental, physical and social well being
                   and it does not just mean absence of diseases.</p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-                  <button type="button" id="watch-videos-button" class="btn btn-outline-secondary btn-lg px-4"><img src="/resources/tabler_player-play.png"></img>Watch Videos</button>
-                  <button type="button" id="book-button" class="btn btn-primary btn-lg px-4 me-sm-3">Book an appointment</button>
+                  <!-- <button type="button" id="watch-videos-button" class="btn btn-outline-secondary btn-lg px-4"><img src="/resources/tabler_player-play.png"></img>Watch Videos</button> -->
+                  <a href="/html/booking.html"><button type="button" id="book-button" class="btn btn-primary btn-lg px-4 me-sm-3">Book an appointment</button></a>
                 </div>
               </div>
             </div>
@@ -125,7 +125,7 @@
               <h5 class="card-title">Dr. Sarah Louis</h5>
               <h6 class="card-subtitle mb-2 text-muted">Cardiologist</h6>
               <img src="/resources/rating.png" style="margin-bottom: 20px;"></img>
-              <a href="#" class="btn btn-primary" style="border-color: rgb(27, 34, 91); background-color: white; color: rgb(27, 34, 91);">Book an appointment</a>
+              <a href="/html/booking.html" class="btn btn-primary" style="border-color: rgb(27, 34, 91); background-color: white; color: rgb(27, 34, 91);">Book an appointment</a>
             </div>
           </div>
           <div id="card-two" class="card">
@@ -135,7 +135,7 @@
             <h5 class="card-title">Dr. Emma Wilson</h5>
             <h6 class="card-subtitle mb-2 text-muted">Neurologist</h6>
             <img src="/resources/rating.png" style="margin-bottom: 20px;"></img>
-            <a href="#" class="btn btn-primary" style="border-color: rgb(27, 34, 91); background-color: white; color: rgb(27, 34, 91);">Book an appointment</a>
+            <a href="/html/booking.html" class="btn btn-primary" style="border-color: rgb(27, 34, 91); background-color: white; color: rgb(27, 34, 91);">Book an appointment</a>
           </div>
         </div>
         </div>
@@ -147,7 +147,7 @@
               <h5 class="card-title">Dr. Shane Draw</h5>
               <h6 class="card-subtitle mb-2 text-muted">Gynecologist</h6>
               <img src="/resources/rating.png" style="margin-bottom: 20px;"></img>
-              <a href="#" class="btn btn-primary" style="border-color: rgb(27, 34, 91); background-color: white; color: rgb(27, 34, 91);">Book an appointment</a>
+              <a href="/html/booking.html" class="btn btn-primary" style="border-color: rgb(27, 34, 91); background-color: white; color: rgb(27, 34, 91);">Book an appointment</a>
             </div>
           </div>
           <div id="card-two" class="card">
@@ -157,12 +157,13 @@
             <h5 class="card-title">Dr. Ravi Bec</h5>
             <h6 class="card-subtitle mb-2 text-muted">Pediatrician</h6>
             <img src="/resources/rating.png" style="margin-bottom: 20px;"></img>
-            <a href="#" class="btn btn-primary" style="border-color: rgb(27, 34, 91); background-color: white; color: rgb(27, 34, 91);">Book an appointment</a>
+            <a href="/html/booking.html" class="btn btn-primary" style="border-color: rgb(27, 34, 91); background-color: white; color: rgb(27, 34, 91);">Book an appointment</a>
           </div>
         </div>
         </div>
         <div style="display: flex; justify-content: center; margin-top: 50px;">
-          <a href="#" class="btn btn-primary" style="border-color: rgb(27, 34, 91); color: white; background-color: rgb(27, 34, 91);">See more</a>
+          <form method="get" action="/doctors" id="doctors-list"></form>
+          <input type="submit" form="doctors-list" value="See more" style="border-color: rgb(27, 34, 91); color: white; background-color: rgb(27, 34, 91); border-radius: 20px; padding: 0.5%;">
         </div>
       </div>
       <div id="about-us" class="container" style="background-color: rgb(27, 34, 91); color: white; max-height: 500px;">
