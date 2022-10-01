@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <title>MediLocker Sign-in</title>
+    <title>MediLocker Doctor Availability</title>
 </head>
 <body>
     <div class="container">
@@ -17,20 +17,24 @@
             <img src="/resources/doc-emma.png" alt="">
             <img src="/resources/doc-sarah.png" alt="">
         </div>
-        <form method="post" action="/signin">
-            <h1 class="h3 mb-3 fw-normal" style="margin: 2%;">Sign-in to your existing account</h1>
-
-            <div class="form-floating">
-              <input name="username" type="email" class="form-control" id="floatingInput" placeholder="name@example.com"></input>
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating">
-              <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password"></input>
-              <label for="floatingPassword">Password</label>
-            </div>
-            <input type="submit" style="width: 200px; justify-self: center; background-color: rgba(27, 34, 91); color: white; border-radius: 20px; height: 40px;"></input>
-            <p>Are you a doctor?<a href="/html/doctor-signin.html" style="margin-left: 5px;">Sign-in here</a></p>
-          </form>
+        <div id="pane">
+            <h1 class="h3 mb-3 fw-normal" style="margin-top: -150px;">Booked slots</h1>
+            <h6 style="margin-top: -400px;">* The doctor is unavailable for these slots. Please book accordingly.</h6>
+            <table style="margin-top: -600px;">
+                <tr>
+                    <th>Doctor</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+                <% bookingsList.forEach((booking) => { %>
+                    <tr>
+                        <td>Dr. <%= booking.doctorName %></td>
+                        <td><%= booking.date %></td>
+                        <td><%= booking.time %></td>
+                    </tr>
+                <% }); %>
+            </table>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
@@ -47,10 +51,10 @@
         margin-left: 250px;
         display: flex;
         padding: 5%;
-        width: 1200px;
+        width: 1500px;
         height: 800px;
     }
-    .container form {
+    #pane {
         border-bottom-right-radius: 20px;
         border-top-right-radius: 20px;
         border-left-width: 0px;
@@ -58,7 +62,7 @@
         border-color: black;
         border-style: solid;
         display: grid;
-        width: 600px;
+        width: 800px;
         align-items: center;
     }
     #banner-images {

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MediLocker Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div
+        id="services"
+        class="bg-image"
+        style="
+          background-image: url('/resources/bg-three.png');
+          height: 800px;
+          ">
+          <div class="px-4 pt-5 my-5 text-center">
+            <h2 class="display-8 fw-bold">Administrator Actions</h2>
+            <h5 class="display-10">with great power comes great responsibility</h5>
+          </div>
+          <div id="booking-search-bar" class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center">
+            <form id="search-booking-form" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" method="post" action="/searchBooking">
+              <input name="bookingID" type="search" class="form-control" placeholder="Booking ID">
+              <input id="submit-button" type="submit" class="form-control" placeholder="Submit" form="search-booking-form">
+            </form>
+            </div>
+          <div id="card-container">
+            <div id="card-one" class="card">
+              <div class="card-body">
+                <form id="all-bookings-form" action="/allBookings" method="post" style="display: grid;">
+                  <input id="" value="View Bookings" type="submit" form="all-bookings-form" style="width: 150px; height: 160px; background-color: white; border-width: 0px; border-radius: 10px;">
+                </form>
+              </div>
+            </div>
+            <div id="card-one" class="card">
+              <div class="card-body">
+                <form id="delete-booking-form" action="/deleteBooking" method="post" style="display: grid; margin-top: 40px;">
+                  <input type="text" name="deleteBookingID" placeholder=" Booking ID" style="width: 150px; height: 40px;border-radius: 20px; border-color:rgb(27, 34, 91); font-size: 14px; padding: 3%;">
+                  <input id="" value="Delete Booking" type="submit" form="delete-booking-form" style="width: 150px; margin-top: 20px; border-radius: 10px;">
+                </form>
+              </div>
+            </div>
+            <div id="card-one" class="card">
+              <div class="card-body" style="display: grid;">
+                <form id="all-queries-form" action="/allQueries" method="post" style="display: grid;">
+                  <input id="" value="View Queries" type="submit" form="all-queries-form" style="width: 150px; height: 160px; background-color: white; border-width: 0px; border-radius: 10px;">
+                </form>
+              </div>
+            </div>
+            <div id="card-one" class="card" style="display: grid;">
+              <div class="card-body">
+                <form id="delete-query-form" action="/deleteQuery" method="post" style="display: grid; margin-top: 0px;">
+                  <input type="text" name="deleteQueryEmail" placeholder=" Query Email" style="width: 150px; height: 40px;border-radius: 20px; border-color:rgb(27, 34, 91); font-size: 14px; padding: 3%;">
+                  <input id="" value="Delete Query" type="submit" form="delete-query-form" style="width: 150px; margin-top: 20px; border-radius: 10px;">
+                </form>
+              </div>
+            </div>
+          </div>      
+      </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>
+<style>
+  * {
+    font-family:'Poppins', Courier, monospace;
+  }
+  #watch-videos-button {
+    background-color: gray;
+    color: white;
+  }
+  #book-button {
+    color: white;
+    background-color: rgb(27, 34, 91);
+  }
+  #we-care-text {
+    color: rgb(27, 34, 91);
+  }
+  #booking-search-bar {
+    height: 100px;
+    width: 600px;
+    margin-left: 500px;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 20px;
+  }
+  #search-booking-form {
+    display: flex;
+    gap: 20px;
+  }
+  .form-control {
+    max-width: 250px;
+  }
+  #submit-button {
+    color: white;
+    background-color: rgb(27, 34, 91);
+    border-width: 2px;
+    width: 100px;
+  }
+  #submit-button:hover {
+    color: white;
+    background-color: gray;
+  }
+  #card-container {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    gap: 100px;
+  }
+  #card-one {
+    display: inline-flex;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+  }
+  #card-one .card-title {
+    margin-top: 30px;
+  }
+  #card-one:hover {
+    color: white;
+    background-color: rgb(27, 34, 91);
+  }
+  #card-two {
+    display: inline-flex;
+    justify-content: center;
+    height: 400px;
+    gap: 10px;
+    width: 300px;
+    border-radius: 20px;
+  }
+  #doctor-card-container {
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+  }
+</style>
