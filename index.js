@@ -215,7 +215,7 @@ app.post("/deleteBooking", bodyParser.urlencoded({extended: false}), (req, res) 
             }
         });
     }
-    Booking.deleteOne({ _id: req.body.deleteBookingID }, (error, data) => {
+    Booking.deleteMany({ _id: req.body.deleteBookingID }, (error, data) => {
         if(!error) {
             res.sendFile(__dirname + "/html/adminHome.html")
         }
